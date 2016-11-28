@@ -1,5 +1,9 @@
 # Blockip
 
+[![Latest Version on Packagist][ico-version]][link-packagist]
+[![Software License][ico-license]](LICENSE.md)
+[![Build Status][ico-travis]][link-travis]
+
 **Block requests from specified IPs quick and easy in Laravel. Highly customizable.**
 
 ## Installation
@@ -66,7 +70,7 @@ return [
     'error_message'     => '401 Unauthorized.',
 
     // Uncomment to use a view instead of plaintext message
-    // 'error_view'     => 'blockip::default'
+    // 'error_view'     => 'blockip::default',
 
     // Environments where the middleware is active
     'envs'              => [
@@ -82,7 +86,7 @@ return [
 ];
 ```
 
-Everything here is pretty much self explanatory, but because the blockip-handler is customizable, you can pretty much change every aspect of the middleware.
+Everything here is pretty much self explanatory, but because the blockip-handler is customizable you can pretty much change every aspect of the middleware.
 
 If you want to write your own handler, you should implement the `Olssonm\Blockip\Handlers\BaseHandler`-interface, like so:
 
@@ -119,3 +123,29 @@ class MyHandler implements BaseHandler {
 Using the system you have the ability to for example make your `getIpsToBlock()`-method check IPs from an API, your `getError()` return a JSON-response etc. etc.
 
 **Note:** the default handler already checks for the special `HTTP_CF_CONNECTING_IP`-header when using the Cloudflare CDN.
+
+## Testing
+
+``` bash
+$ composer test
+```
+
+or
+
+``` bash
+$ phpunit
+```
+
+Laravel always runs in the "testing" environment while running tests. Make sure that `testing` is set in the `envs`-array in `blockip.php`.
+
+## License
+
+The MIT License (MIT). Please see [License File](LICENSE.md) for more information.
+
+© 2016 [Marcus Olsson](https://marcusolsson.me).
+
+[ico-version]: https://img.shields.io/packagist/v/olssonm/blockip.svg?style=flat-square
+[ico-license]: https://img.shields.io/badge/license-MIT-brightgreen.svg?style=flat-square
+[ico-travis]: https://img.shields.io/travis/olssonm/blockip/master.svg?style=flat-square
+[link-packagist]: https://packagist.org/packages/olssonm/blockip
+[link-travis]: https://travis-ci.org/olssonm/blockip
