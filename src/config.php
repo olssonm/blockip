@@ -15,7 +15,7 @@
         'error_message'     => '401 Unauthorized.',
 
         // Uncomment to use a view instead of plaintext message
-        // 'error_view'     => 'blockip::default'
+        // 'error_view'     => 'blockip::default',
 
         // Environments where the middleware is active
         'envs'              => [

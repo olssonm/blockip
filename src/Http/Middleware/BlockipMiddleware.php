@@ -4,6 +4,9 @@ use Olssonm\Blockip\Blockip;
 
 use Closure;
 
+/**
+ * The Blockip middleware
+ */
 class BlockipMiddleware
 {
     /**
