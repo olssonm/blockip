@@ -8,7 +8,7 @@
 
 ## Version Compatibility
 
- Laravel        | l5-very-basic-auth
+ Laravel        | blockip
 :---------------|:----------
  5.3.x          | 1.x
  5.4.x          | 2.x
