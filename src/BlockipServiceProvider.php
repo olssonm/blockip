@@ -20,7 +20,7 @@ class BlockipServiceProvider extends ServiceProvider
         $this->loadViewsFrom(__DIR__ . '/resources/views', 'blockip');
 
         // Register middleware
-        $router->aliasMiddleware('blockip', 'Olssonm\Blockip\Http\Middleware\BlockipMiddleware');
+        $router->aliasMiddleware('blockip', \Olssonm\Blockip\Http\Middleware\BlockipMiddleware::class);
     }
 
     /**
