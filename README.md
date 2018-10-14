@@ -22,7 +22,7 @@ Via Composer
 $ composer require olssonm/blockip
 ```
 
-Add the service provider to the providers array in `config/app.php`.
+Add the service provider to the providers array in `config/app.php` (auto-detection also available in newer Laravel-versions).
 
 ``` php
 <?php
@@ -150,7 +150,7 @@ Laravel always runs in the "testing" environment while running tests. Make sure 
 
 The MIT License (MIT). Please see [License File](LICENSE.md) for more information.
 
-© 2017 [Marcus Olsson](https://marcusolsson.me).
+© 2018 [Marcus Olsson](https://marcusolsson.me).
 
 [ico-version]: https://img.shields.io/packagist/v/olssonm/blockip.svg?style=flat-square
 [ico-license]: https://img.shields.io/badge/license-MIT-brightgreen.svg?style=flat-square
