@@ -85,7 +85,7 @@ class BlockipTests extends \Orchestra\Testbench\TestCase {
         $result = $this->middleware->handle($request, $next);
 
 		$this->assertEquals(401, $result->getStatusCode());
-		$this->assertStringContainsString('This is the default view for the blockip-package', $result->getContent());
+		$this->assertContains('This is the default view for the blockip-package', $result->getContent());
 	}
 
 	/** @test */
