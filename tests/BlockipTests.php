@@ -9,7 +9,7 @@ class BlockipTests extends \Orchestra\Testbench\TestCase {
 
 	protected $middleware;
 
-	public function setUp()
+	public function setUp() : void
     {
         parent::setUp();
         $this->middleware = new BlockipMiddleware;
@@ -85,7 +85,7 @@ class BlockipTests extends \Orchestra\Testbench\TestCase {
         $result = $this->middleware->handle($request, $next);
 
 		$this->assertEquals(401, $result->getStatusCode());
-		$this->assertContains('This is the default view for the blockip-package', $result->getContent());
+		$this->assertStringContainsString('This is the default view for the blockip-package', $result->getContent());
 	}
 
 	/** @test */
@@ -105,5 +105,10 @@ class BlockipTests extends \Orchestra\Testbench\TestCase {
 
 		$this->assertEquals(401, $result->getStatusCode());
 		$this->assertEquals(config('blockip.error_message'), $result->getContent());
+	}
+
+	public static function teardownAfterClass() : void
+	{
+		parent::tearDownAfterClass();
 	}
 }
