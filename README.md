@@ -14,6 +14,7 @@
  5.4.x                | 2.x.x
  5.5/5.6/5.7/5.8      | 3.x.x
  ^6.0                 | 4.x.x
+ ^7.0                 | 5.x.x
 
 ## Installation
 
@@ -151,7 +152,7 @@ Laravel always runs in the "testing" environment while running tests. Make sure 
 
 The MIT License (MIT). Please see [License File](LICENSE.md) for more information.
 
-© 2019 [Marcus Olsson](https://marcusolsson.me).
+© 2020 [Marcus Olsson](https://marcusolsson.me).
 
 [ico-version]: https://img.shields.io/packagist/v/olssonm/blockip.svg?style=flat-square
 [ico-license]: https://img.shields.io/badge/license-MIT-brightgreen.svg?style=flat-square
